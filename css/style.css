@@ -1,0 +1,427 @@
+body{                                            /*initial properties for */
+	background: #fff;
+	font-family: Ubuntu,sans-serif;     /*we use two font families Ubuntu and Montserrat*/
+	font-size: 16px;          /*text size*/
+	font-weight: 400;		
+	min-width: 320px;            /*for mobile devices, at least 320px screen*/
+	color: #828282;			  /*color of text*/
+}
+a{                                               
+	font-family: Montserrat,sans-serif;
+	font-weight: 700;                 /*basic code for all the anchor tags*/
+	font-style: 17px;
+	color: #F27E37;
+}
+a:hover{
+	color: #9C410A;          /*hover stands for: when you direct mouse to the element color will be changed*/
+}
+img{
+	max-width: 100%;        /*100% is needed so that image will be of full size*/
+	height: auto;
+}
+section{
+	position: relative; /*all sections will be of relative positioning so that no other block could take their position*/   
+}
+h2{
+	font-family: Montserrat,sans-serif;				/*properties for h2 tag*/
+	font-size: 30px;
+	margin-top: 0;
+	text-transform: uppercase;
+}
+.location-point{
+	padding-right: 15%;
+}
+/*=============================================================SECTION header=======================================================================*/
+#header{
+	background: url(../img/korea.jpg) center no-repeat;
+	background-size: cover;
+	height: 100vh;									/* будет занимать или заливать все что осталось */
+	/*второй вариант такой же как и vh. Можно сделать задав тегам html body и секции с id=header это -> height:100%*/
+	min-height: 500px;
+	text-align: center;     /*allign all the elements to center*/
+}
+.section-center{
+	/*position: absolute;    */
+	max-width: 600px;
+	display: inline-block;       /* inline-block can be positioned at center left right  */
+	margin-top: 170px;
+}
+#header h1{
+	font-family: Montserrat,sans-serif;
+	font-size: 31px;
+	font-weight: 700;					/*make text bolder*/
+	color: #fff;
+	text-transform: uppercase;		/*make text with uppercase letters*/
+}
+#header p{
+	font-size: 20px;
+	color: #fff;
+}
+.btn{                          /* here we are changing property of btn class, it is bootstraps class, it means we are modifiying bootstrap object*/ 
+	font-family: Monserrat,sans-serif;
+	font-size: 17px;
+	color: #fff;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	margin: 0 10px;
+	border: none;
+	transition: all 0.5s;      /*transition is used to make scenario smooth and more beautiful*/
+}
+.fas{                /*this is the class of fontawesome(we use it for icons)*/
+	margin-left: 5px;
+}
+		/*MODIFY BOOTSTRAP BUTTONS */
+.btn-primary{
+	background: #0081CC;
+}
+.btn-primary:hover{
+	background: #003F64;
+}
+.btn-default{
+	background: #F27E37;
+}
+.btn-default:hover{
+	background: #9C410A;
+	color: #fff;
+}
+		/*MODIFY BOOTSTRAP BUTTONS */
+
+
+/*==========================================================SECTION speakers==============================================================*/
+#main
+{
+	padding: 90px 0;
+	border-bottom: 2px solid #f0f0f1;
+}
+#main h2{
+	color: #828689;
+	font-weight: 700;
+}
+.large{            							   /*paragraph with larger text*/
+	color: #828689;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+.section-tabs{								   /*tabs, change it's properties*/
+	border: 3px solid #ececec;
+	border-radius: 2px;
+}
+.section-tabs .nav-tabs li:not(.active){       /*this means we are changing background of non-active tab*/
+	background: #ececec;
+}
+.section-tabs .nav-tabs.nav-justified li a,    /*we are deleting all the borders which are default by browser whenever we press or direct a mouse to an element*/
+.section-tabs .nav-tabs.nav-justified li.active a,
+.section-tabs .nav-tabs.nav-justified li.active a:focus,
+.section-tabs .nav-tabs.nav-justified li.active a:hover
+{
+	border-radius: 0;
+	border: none;
+	font-family: Ubuntu,sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	outline: 0;
+}
+.section-tabs .nav-tabs.nav-justified li.active a /*make bolder text for active tab*/
+{
+	color: #9097a1;
+}
+.nav-tabs.nav-justified li a{    /*properties for unorderd list and it it's content*/
+	color: #abb1ba;
+}
+.section-tabs .tab-content{
+	padding: 25px 20px;
+}
+.section-tabs .tab-content ul{
+	padding-left: 10px;
+	width: 100%;
+}
+.section-tabs .tab-content ul li{
+	line-height: 40px;
+}
+.section-tabs .tab-content ul li i{  /* font which we took from fontawesome.com */
+	font-size: 25px;
+	color: #0081CC;
+	margin-right: 10px;
+}
+.team-head{
+	margin-top: 50px;
+	margin-bottom: 60px;
+}
+.team-head h2{
+	color: #6a7079;
+}
+.tab-content>.tab-pane>ul>li>a.link{       /*change the link inside the main navigation of a web page*/
+	text-transform: none;
+	font-weight: 500;
+	color: #0081CC;
+}
+.members h3{                      /*heading under the avatar*/
+	color: #777a7d;
+	font-size: 20px;
+	text-transform: uppercase;
+}
+.img-circle{                    /*avatar*/
+	width: 140px;
+	height: 140px;
+	transition: all .5s;
+	cursor: pointer;
+}
+.item > div:hover .img-circle{     /*avatar when moues directed*/
+	opacity: 0.85;
+	width: 150px;
+	height: 150px;
+}
+.item > div:hover h3{             /*heading when moues directed*/
+	color: #0081CC;
+}
+.team-footer{ 				/*bottom part of section*/
+	margin-top: 70px;
+}
+.boldSpan{
+	font-weight: 700;
+}
+/*===================================================================SECTION Events=============================================================================*/
+#events{
+	padding: 90px 0;
+}
+.carousel-inner{
+	border: 2px solid rgba(242,126,55,0.7);
+    border-radius: 15px;
+}
+.carousel-inner>.item{
+	max-height: 310px;
+}
+.carousel-inner>.item>img{
+	width: 100%;
+	height: 310px;
+}
+.link{
+	text-transform: uppercase;
+}
+.row-item{
+	margin-top: 100px;
+}
+.carousel-indicators{
+	left: 0;
+	margin: 0;
+	bottom: 10px;
+	margin-left: 20px;
+	width: auto;
+}
+.carousel-indicators li{
+	border: 1px solid #F27E37;
+	background: #fff;
+	height: 14px;
+	width:14px;
+}
+.carousel-indicators li.active{
+	background: rgba(242,126,55,1);
+	height: 16px;
+	width: 16px;
+}
+
+/*=================================================form==========================================================*/
+
+#form{
+	padding: 90px 0;
+	background: #f3f3f3;
+
+}
+.section-form{
+	background: #fff;
+	padding: 40px;
+	border-radius: 2px;
+	margin-top: 50px;
+}
+.section-form input,.section-form select{
+	height: 44px;
+	background: #efefef;
+	padding-right: 30px;
+}
+.has-success .form-control-feedback{
+	color: #2cc7c1;
+}
+.has-success .form-control,
+.section-form input.form-control:focus{
+	border: 2px solid #95e3e0;
+	background: #fff;
+	box-shadow: none;
+}
+.form-control-feedback{
+	right: 10px;
+	line-height: 44px;
+}
+.has-error .form-control-feedback {
+    color: #a94442;
+    line-height: 44px;
+}
+.has-success .form-control-feedback {
+    color: #2cc7c1;
+    line-height: 44px;
+}
+/*поле select - размеры, фон, горизонтальное выравнивание*/
+.select2-container--default .select2-selection--single{
+	height: 44px;
+	text-align: left;
+	background: #efefef;
+}
+/*поле select - вертикальное выравнивание + цвет*/
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+	line-height: 44px;
+	color: #bebebe;
+}
+/*фон открытого поля select*/
+.select2-container--open .select2-selection--single{
+	background: #2cc7c1;
+}
+/*цвет открытого поля select*/
+.select2-container--open .select2-selection--single .select2-selection__rendered{
+	color: #fff;
+}
+/*выравнивание стрелки*/
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+	top: 10px;
+}
+
+li.select2-results__option:first-child{          /*hide placeholder*/
+	display: none;
+}
+/*фон списка*/
+.select2-results__options,
+.select2-container--default .select2-results__option--highlighted[aria-selected],
+.select2-container--default .select2-results__option[aria-selected="true"]{
+	background: #525b64;
+}
+/*цвет списка*/
+.select2-results__options{
+	color: #2cc7c1;
+}
+#subscribeBtn{
+	opacity: 1;
+}
+/*======================================#sponsors================================*/
+#sponsors{
+	background: #fff;
+	text-align: center;
+	padding: 60px 0;
+}
+
+/*======================================#contacts================================*/
+#contacts{
+	background: #525b64;
+	padding: 70px 0;
+}
+#contacts h3,
+#contacts h4{
+	color: #fff;
+	margin:0 0 25px;
+}
+#contacts h3 span{
+	font-weight: 700;
+}
+#contacts p{
+	color: #cdd0d2;
+}
+#contacts a,
+#contacts .contacts p{
+	color: #2cc7c1;
+}
+#contacts .contacts p i{
+	margin-right: 10px;
+}
+#contacts .social img{
+	margin-right: 10px;
+}
+
+/*======================================#copy================================*/
+#copy{
+	background: #3f464c;
+	color: #cdd0d2;
+	padding: 15px;	
+}
+#copy p{
+	margin: 0;
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.carousel-inner{
+		max-height: 350px;
+	}
+	.carousel-inner>.item>img{
+		height: 350px;
+	}
+	.team-head,.team-footer{
+		margin:20px 0;
+	}
+	#speakers,#events{
+		padding: 20px 0;
+	}
+	.row-item-col{
+		margin-bottom: 20px;
+	}
+	.item{
+		margin-bottom: 30px;
+	}
+	.row-item{
+		margin-top: 30px;
+	}
+	.carousel-indicators{
+	bottom: 40px;
+	}
+	#form,#contacts{
+		padding: 20px 0;
+	}
+	#sponsors{
+		padding: 20px 0 0 0;
+	}
+	#sponsors img{
+		padding: 20px 0 0 0;
+		margin-bottom: 20px;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	
+}
+
+@media only screen and (max-width : 600px) {
+	.carousel-inner{
+		max-height: 270px;
+	}
+	.carousel-inner>.item>img{
+		height: 270px;
+	}
+	.section-center{
+		max-width: 320px;
+		display: inline-block;                               /* inline-block can be positioned at center left right  */
+		margin-top: 80px;
+	}
+	#header h1{
+		font-size: 20px;
+	}
+	#header p{
+		font-size: 16px;
+	}
+	.section-btn .btn{
+		font-size: 15px; 
+	}
+	#header{
+		min-height: 300px;
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.row-item{
+		margin-top: 10px;
+	}
+}
+@media only screen and (min-width: 320px){
+
+}
