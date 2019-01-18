@@ -33,7 +33,7 @@ h2{
 }
 /*=============================================================SECTION header=======================================================================*/
 #header{
-	background: url(../img/korea.jpg) center no-repeat;
+	background: url(../img/korea-min.jpg) center no-repeat;
 	background-size: cover;
 	height: 100vh;									/* будет занимать или заливать все что осталось */
 	/*второй вариант такой же как и vh. Можно сделать задав тегам html body и секции с id=header это -> height:100%*/
